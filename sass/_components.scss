@@ -199,3 +199,38 @@
         display: block;
     }
 }
+///////////////////////////////
+///////  OVERVIEW /////////////
+.overview {
+    display: flex;
+    justify-content: space-between;
+
+
+    &__heading {
+
+    }
+
+    &__stars {
+        margin-right: auto;
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &__location {
+
+    }
+    &__rating {
+
+    }
+    &__rating-average {
+
+    }
+    &__rating-count {
+
+    }
+}
