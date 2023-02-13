@@ -155,7 +155,7 @@
         transform: scaleY(1); // this shows the 3px red bar
         width: 100%;
     }
-    &__active:active::before {
+    &__item:active::before {
         background-color: var(--color-primary-light);
     }
 
