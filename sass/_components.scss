@@ -146,13 +146,19 @@
         background-color: var(--color-primary);
         transform: scaleY(0); //this is for the redbar in the nav
         transition: transform .2s,
-                    width .4s cubic-bezier(.98,-0.01,0,1) .2s;
+                    width .4s cubic-bezier(.98,-0.01,0,1) .2s
+                    background-color .1s;
     }
 
-    &__item:hover::before {
+    &__item:hover::before,
+    &__item--active::before {
         transform: scaleY(1); // this shows the 3px red bar
         width: 100%;
     }
+    &__active:active::before {
+        background-color: var(--color-primary-light);
+    }
+
     &__link:link,
     &__link:visited {
         color: var(--color-grey-light-1);
