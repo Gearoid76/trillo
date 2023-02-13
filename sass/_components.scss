@@ -146,7 +146,7 @@
         background-color: var(--color-primary);
         transform: scaleY(0); //this is for the redbar in the nav
         transition: transform .2s,
-                    width .4s .2s;
+                    width .4s cubic-bezier(.98,-0.01,0,1) .2s;
     }
 
     &__item:hover::before {
@@ -160,6 +160,8 @@
         text-transform: uppercase;
         display: block;
         padding: 1.5em 3rem;
+        position: relative;
+        z-index: 10;
 
         display: flex;
         align-items: center;      

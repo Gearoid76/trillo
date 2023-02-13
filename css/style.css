@@ -128,7 +128,7 @@ body {
     width: 3px;
     background-color: var(--color-primary);
     transform: scaleY(0);
-    transition: transform .2s, width .4s .2s; }
+    transition: transform 0.2s, width 0.4s cubic-bezier(0.98, -0.01, 0, 1) 0.2s; }
   .side-nav__item:hover::before {
     transform: scaleY(1);
     width: 100%; }
@@ -138,6 +138,8 @@ body {
     text-transform: uppercase;
     display: block;
     padding: 1.5em 3rem;
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center; }
   .side-nav__icon {
