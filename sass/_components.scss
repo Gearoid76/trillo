@@ -241,13 +241,22 @@
         background-color: var(--color-primary);
         color: #fff;
         margin-left: 3rem;
+        padding: 0 2.25rem;
+        align-self: stretch;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
+        margin-bottom: -3px;
     }
     &__rating-count {
         font-size: .8rem;
+        text-transform: uppercase;
     }
 
 }
@@ -280,7 +289,7 @@
 
     50%{
         transform: scale(1.05);
-        box-shadow: 0 1rem 4rem rgba(0,0,0, .25);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
     }
 
     100%{
