@@ -200,7 +200,7 @@
     }
 }
 ///////////////////////////////
-///////  OVERVIEW /////////////
+//////HOTEL OVERVIEW //////////
 .overview {
     display: flex;
     align-items: center;
@@ -278,7 +278,8 @@
     }
     &:focus {
         outline: none;
-        animation: pulsate 1s infinite;  
+        animation: pulsate 1s infinite;
+        -webkit-animation: pulsate 1s infinite;  
     }
 }
 @keyframes pulsate {
