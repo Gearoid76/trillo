@@ -299,3 +299,147 @@
     }
     
 }
+
+//////////////////////////////
+///////  PARAGRAPH ///////////
+p:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+/////////////////////////
+///////  LIST ///////////
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+
+        //Older browsers
+        //background-image: url(../img/chevron-thin-right.svg);
+        //background-size: cover;
+
+        //Newer barowsers --basks
+        background-color: var(--color-primary);
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+
+
+    }
+}
+
+
+//////////////////////////////
+///////  RECOMMEND ///////////
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+        margin-right: auto;
+    }
+
+   // &__friends {
+    //chapter 83 unused T1 18:35
+   // }
+
+    &__photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        &:not(:last-child){
+            margin-right: -1.5rem;
+        }
+    }
+}
+////////////////////////////
+///////  REVIEWS ///////////
+.review {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &__text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+
+    }
+
+    &__user {
+        display: flex; //right
+        align-items: center;
+        //justify-content: space-between;  
+    }
+
+    &__photo {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 2rem;
+    }
+
+    &__user-box {
+        //flex-direction: column;
+        margin-right: auto;
+
+    }
+
+    &__user-name {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: .4rem; //not working
+
+    }
+
+    &__user-date {
+        font-size: 1rem;
+        margin-top: -2rem;
+        color: var(--color-grey-dark-3);
+    }
+    &__rating {
+        align-items: center;
+        justify-content: center;
+        color: var(--color-primary);
+        align-self: center;
+        font-size: 2rem;
+        font-weight: 300;
+        
+    }
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 5;
+    }
+}
