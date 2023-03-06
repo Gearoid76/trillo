@@ -14,12 +14,18 @@
     align-items: center; // along the cross axis
     justify-content: center;  // along the main axis
 
+    @media  only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-3);
+    }
+
 
     &__input {
         font-family: inherit;
         font-size: inherit;
         color: inherit;
-        background-color: var(--line);
+        background-color: var(--color-grey-light-3);
         border: none;
         padding: .7rem 2rem;
         border-radius: 100px;
@@ -188,6 +194,11 @@
             justify-content: center;
             padding: 2rem;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
     }
 
     &__icon {
@@ -196,6 +207,12 @@
         margin-right: 2rem;
         fill: currentColor;
         
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
@@ -235,6 +252,11 @@
         text-transform: uppercase;
         padding: 1.5rem 3rem;
 
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
+
     }
 
     &__stars {
@@ -270,16 +292,29 @@
         align-items: center;
         justify-content: center;
 
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
     }
+
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+        }
     }
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: .5rem;
+        }
     }
+
 
 }
 //////////////////////////////////
@@ -364,16 +399,18 @@ p:not(:last-of-type) {
         margin-right: .7rem;
 
         //Older browsers
-        //background-image: url(../img/chevron-thin-right.svg);
-        //background-size: cover;
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
-        //Newer barowsers --basks
-        background-color: var(--color-primary);
-        mask-image: url(../img/chevron-thin-right.svg);
-        mask-size: cover;
-        -webkit-mask-image: url(../img/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
-
+        //Newer barowsers --masks
+        @supports ( -webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            background-image: none;
+        }
 
     }
 }
