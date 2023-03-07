@@ -12,6 +12,7 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
+  
   "author": "Jonas",
   "license": "ISC",
   "devDependencies": {
@@ -34,4 +35,5 @@
     "url": "https://github.com/Gearoid76/trillo/issues"
   },
   "homepage": "https://github.com/Gearoid76/trillo#readme"
+
 }
