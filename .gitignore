@@ -5,3 +5,12 @@ lecture 79 time 12:00
 
  margin-right: auto; great trick to space out components.
  https://css-tricks.com/snippets/html/glyphs/ ch 84 building 12:02
+
+ Issue with npm run build:css 
+ solved npm install error
+
+Ilham · Lecture 72 · 1 year ago
+If anyone in 2022 above have a problem related to "npm install" command, here's what I do to resolve it. 
+First you need to remove all devDependencies line code in package.json
+
+and then install it again via command line in vscode npm i autoprefixer concat node-sass npm-run-all postcss-cli live-server --save-dev. After that you can run npm run start again
